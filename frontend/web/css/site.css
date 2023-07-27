@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+* {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 15px;
+  /* outline: 0.1rem solid black; */
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.bg-azul{
+  background: rgb(0, 35, 125);
+}
+.bg-azul-subtle {
+  background: rgb(205, 210, 225);
+}
+
+/* NAVBAR */
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #FFF;
+}
+.navbar-dark .navbar-nav .nav-link.active {
+  border-bottom: 2px solid #ffc107;
+}
+.navbar-dark .navbar-nav .nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #ffc107;
+  transition: width 0.4s ease;
+  transform: translateX(-50%);
+}
+.navbar-dark .navbar-nav .nav-link:hover::before {
+  width: 100%;
+}
+.navbar-dark .navbar-nav .nav-link.active::before {
+}
+.dropdown-toggle::after {
+  content: none;
+}
+/* FIM NAVBAR */
+
+/* Defina o background que será aplicado quando o collapse estiver ativo */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: transparent; /* Defina a cor de fundo inicial */
+    transition: background-color 0.0s; /* Adicione a transição para suavizar a mudança de cor */
+  }
+  .navbar-collapse.show {
+    background-color: #495057; /* Defina a cor de fundo quando o collapse estiver ativo */
+    padding: 0.5rem !important;
+  }
+}
+
+
+/* CAROUSEL */
+.c-item {
+  height: 480px;
+}
+.c-img {
+  filter: brightness(0.6);
+}
+@media (max-width: 991px) {
+  .c-item {
+    height: 240px;
+  }
+}
+/* END CAROUSEL */
