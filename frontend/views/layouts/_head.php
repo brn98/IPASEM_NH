@@ -19,4 +19,5 @@ AppAsset::register($this);
         <?= Html::encode($this->title) ?>
     </title>
     <?php $this->head() ?>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 </head>

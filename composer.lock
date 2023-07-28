@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b860e9f923b9ebab7ca0e1af84abd6e9",
+    "content-hash": "b6919554d9aeb20c577308e87b8636db",
     "packages": [
         {
             "name": "2amigos/yii2-tinymce-widget",
@@ -4912,6 +4912,46 @@
                 "source": "https://github.com/twbs/bootstrap/tree/v3.0.3"
             },
             "time": "2013-12-05T16:09:10+00:00"
+        },
+        {
+            "name": "twbs/bootstrap-icons",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twbs/icons.git",
+                "reference": "8ef6f03dc5bda8e5400d7083b8976105bf73f2ed"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twbs/icons/zipball/8ef6f03dc5bda8e5400d7083b8976105bf73f2ed",
+                "reference": "8ef6f03dc5bda8e5400d7083b8976105bf73f2ed",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Otto",
+                    "email": "markdotto@gmail.com"
+                }
+            ],
+            "description": "Official open source SVG icon library for Bootstrap",
+            "homepage": "https://icons.getbootstrap.com/",
+            "keywords": [
+                "bootstrap",
+                "icon font",
+                "icons",
+                "svg"
+            ],
+            "support": {
+                "issues": "https://github.com/twbs/icons/issues",
+                "source": "https://github.com/twbs/icons/tree/main"
+            },
+            "time": "2023-07-24T18:30:43+00:00"
         },
         {
             "name": "unclead/yii2-multiple-input",

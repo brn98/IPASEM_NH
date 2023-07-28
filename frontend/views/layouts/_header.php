@@ -1,67 +1,30 @@
 <?php
-
 use yii\bootstrap5\Html;
 use yii\bootstrap5\Nav;
 
 ?>
 
 <header class="sticky-top">
-    <div class="py-2 bg-azul"></div>
+    <div class="bg-azul py-1">
+        <div class="container">
+            <div class="row d-none d-md-block">
+                <div class="col-md d-flex justify-content-evenly">
+                    <?= Html::a('<i class="opacity-07 fa fa-search-plus"></i> Transparência', ['/site/transparencia'], ['class' => 'header-button text-decoration-none text-white']) ?>
+                    <?= Html::a('<i class="opacity-07 fa fa-headphones"></i> Ouvidoria', ['/site/button2'], ['class' => 'header-button text-decoration-none text-white']) ?>
+                    <?= Html::a('<i class="opacity-07 fa fa-wheelchair"></i> Acessibilidade', ['/site/button3'], ['class' => 'header-button text-decoration-none text-white']) ?>
+                    <?= Html::a('<i class="opacity-07 fa fa-sitemap"></i> Mapa site', ['/site/button4'], ['class' => 'header-button text-decoration-none text-white']) ?>
+                    <?= Html::a('<i class="opacity-07 fa fa-phone"></i> Contato', ['/site/button4'], ['class' => 'header-button text-decoration-none text-white']) ?>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="bg-azul-subtle">
         <nav class="navbar navbar-expand-lg py-0">
             <div class="container">
-                <a class="navbar-brand p-0" href="#"><img src="<?= Yii::getAlias('@web') ?>/images/logo.png" alt="Logo"
-                        style='max-width: 115px; height: auto;'></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse my-2 rounded" id="navbarTogglerDemo02">
-                    <ul class="navbar-nav mx-auto mb-lg-0 gap-2 column-gap-3 text-uppercase fw-bold">
-                        <li class="nav-item">
-                            <?= Html::a('<i class="opacity-07 fa fa-search-plus"></i> Transparência', ['/site/transparencia'], ['class' => 'header-button text-decoration-none']) ?>
-                        </li>
-                        <li class="nav-item">
-                            <?= Html::a('<i class="opacity-07 fa fa-headphones"></i> Ouvidoria', ['/site/button2'], ['class' => 'header-button text-decoration-none']) ?>
-                        </li>
-                        <li class="nav-item">
-                            <?= Html::a('<i class="opacity-07 fa fa-wheelchair"></i> Acessibilidade', ['/site/button3'], ['class' => 'header-button text-decoration-none']) ?>
-                        </li>
-                        <li class="nav-item">
-                            <?= Html::a('<i class="opacity-07 fa fa-sitemap"></i> Mapa site', ['/site/button4'], ['class' => 'header-button text-decoration-none']) ?>
-                        </li>
-                        <li class="nav-item">
-                            <?= Html::a('<i class="opacity-07 fa fa-phone"></i> Contato', ['/site/button4'], ['class' => 'header-button text-decoration-none']) ?>
-                        </li>
-                    </ul>
-                    <?php if (Yii::$app->user->isGuest): ?>
-                        <div class="d-flex justify-content-end">
-                            <?= Html::a('Portais', ['/site/login'], ['class' => ['btn btn-primary login text-decoration-none']]) ?>
-                        </div>
-                    <?php else: ?>
-                        <div class="d-flex justify-content-end">
-                            <?= Html::beginForm(['/site/logout'], 'post', ['class' => 'd-flex']) ?>
-                            <?= Html::submitButton(
-                                'Logout (' . Yii::$app->user->identity->username . ')',
-                                ['class' => 'btn btn-primary-subtle logout text-decoration-none']
-                            ) ?>
-                            <?= Html::endForm() ?>
-                        </div>
-                    <?php endif; ?>
-                </div>
-            </div>
-        </nav>
-    </div>
-    <div class="bg-azul">
-        <nav class="navbar navbar-expand-lg navbar-dark justify-content-end">
-            <div class="container">
-                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse rounded" id="navbarSupportedContent">
+                <a class="navbar-brand p-0 m-0" href="#"><img src="<?= Yii::getAlias('@web') ?>/images/logo.png"
+                        alt="Logo" style='max-width: 115px; height: auto;'></a>                
+                <div class="offcanvas offcanvas-end w-50 flex-lg-row" tabindex="-1" id="navbarOffcanvasLg"
+                    aria-labelledby="navbarOffcanvasLgLabel">
                     <?php
                     echo Nav::widget([
                         'items' => [
@@ -172,11 +135,11 @@ use yii\bootstrap5\Nav;
                                 ],
                             ],
                         ],
-                        'options' => ['class' => 'navbar-nav me-auto column-gap-3 fs-3 text-uppercase'],
+                        'options' => ['class' => 'navbar-nav mx-lg-auto mx-2 column-gap-3 text-uppercase fw-bold'],
                         'encodeLabels' => false, // Para não codificar os rótulos HTML
                     ]);
                     ?>
-                    <div class="col-md-2 col-sm-5 col-5 ms-auto">
+                    <div class="col-lg-2 ms-lg-auto ms-auto me-lg-4 me-2 mb-2 my-lg-auto">
                         <div class="input-group">
                             <?= \yii\helpers\Html::input('text', 'search', '', ['class' => 'form-control search-field border-end-0', 'placeholder' => 'Pesquisar', 'id' => 'search-field']) ?>
                             <span class="input-group-text bg-white" onclick="handleSearch()" style="cursor: pointer;">
@@ -185,7 +148,29 @@ use yii\bootstrap5\Nav;
                         </div>
                     </div>
                 </div>
+                <div class="ms-auto me-2">
+                    <?php if (Yii::$app->user->isGuest): ?>
+                        <div class="d-flex justify-content-end">
+                            <?= Html::a('Portais', ['/site/login'], ['class' => ['btn btn-primary login text-decoration-none']]) ?>
+                        </div>
+                    <?php else: ?>
+                        <div class="d-flex justify-content-end">
+                            <?= Html::beginForm(['/site/logout'], 'post', ['class' => 'd-flex']) ?>
+                            <?= Html::submitButton(
+                                'Logout (' . Yii::$app->user->identity->username . ')',
+                                ['class' => 'btn btn-primary-subtle logout text-decoration-none']
+                            ) ?>
+                            <?= Html::endForm() ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
             </div>
         </nav>
     </div>
+    <div class="bg-azul py-1"></div>
 </header>
