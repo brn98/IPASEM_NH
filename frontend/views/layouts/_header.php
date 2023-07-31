@@ -1,7 +1,10 @@
 <?php
 use yii\bootstrap5\Html;
 use yii\bootstrap5\Nav;
+use yii\bootstrap5\NavBar;
+use yii\web\View;
 
+$this->registerJsFile('@web/js/script.js', ['position' => View::POS_END]);
 ?>
 
 <header class="sticky-top">
@@ -9,11 +12,11 @@ use yii\bootstrap5\Nav;
         <div class="container">
             <div class="row d-none d-md-block">
                 <div class="col-md d-flex justify-content-evenly">
-                    <?= Html::a('<i class="opacity-07 fa fa-search-plus"></i> Transparência', ['/site/transparencia'], ['class' => 'header-button text-decoration-none text-white']) ?>
-                    <?= Html::a('<i class="opacity-07 fa fa-headphones"></i> Ouvidoria', ['/site/button2'], ['class' => 'header-button text-decoration-none text-white']) ?>
-                    <?= Html::a('<i class="opacity-07 fa fa-wheelchair"></i> Acessibilidade', ['/site/button3'], ['class' => 'header-button text-decoration-none text-white']) ?>
-                    <?= Html::a('<i class="opacity-07 fa fa-sitemap"></i> Mapa site', ['/site/button4'], ['class' => 'header-button text-decoration-none text-white']) ?>
-                    <?= Html::a('<i class="opacity-07 fa fa-phone"></i> Contato', ['/site/button4'], ['class' => 'header-button text-decoration-none text-white']) ?>
+                    <?= Html::a('<i class="opacity-07 fa fa-search-plus"></i> Transparência', ['/site/transparencia'], ['class' => 'text-decoration-none link-light opacity-50-hover']) ?>
+                    <?= Html::a('<i class="opacity-07 fa fa-headphones"></i> Ouvidoria', ['/site/button2'], ['class' => 'text-decoration-none link-light opacity-50-hover']) ?>
+                    <?= Html::a('<i class="opacity-07 fa fa-wheelchair"></i> Acessibilidade', ['/site/button3'], ['class' => 'text-decoration-none link-light opacity-50-hover']) ?>
+                    <?= Html::a('<i class="opacity-07 fa fa-sitemap"></i> Mapa site', ['/site/button4'], ['class' => 'text-decoration-none link-light opacity-50-hover']) ?>
+                    <?= Html::a('<i class="opacity-07 fa fa-phone"></i> Contato', ['/site/button4'], ['class' => 'text-decoration-none link-light opacity-50-hover']) ?>
                 </div>
             </div>
         </div>
@@ -139,7 +142,7 @@ use yii\bootstrap5\Nav;
                         'encodeLabels' => false, // Para não codificar os rótulos HTML
                     ]);
                     ?>
-                    <div class="col-lg-2 ms-lg-auto ms-auto me-lg-4 me-2 mb-2 my-lg-auto">
+                    <div class="col-lg-3 ms-lg-auto ms-auto me-lg-4 me-2 mb-2 my-lg-auto">
                         <div class="input-group">
                             <?= \yii\helpers\Html::input('text', 'search', '', ['class' => 'form-control search-field border-end-0', 'placeholder' => 'Pesquisar', 'id' => 'search-field']) ?>
                             <span class="input-group-text bg-white" onclick="handleSearch()" style="cursor: pointer;">
@@ -148,7 +151,7 @@ use yii\bootstrap5\Nav;
                         </div>
                     </div>
                 </div>
-                <div class="ms-auto me-2">
+                <div class="ms-auto me-2 me-lg-0">
                     <?php if (Yii::$app->user->isGuest): ?>
                         <div class="d-flex justify-content-end">
                             <?= Html::a('Portais', ['/site/login'], ['class' => ['btn btn-primary login text-decoration-none']]) ?>

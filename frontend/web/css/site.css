@@ -10,16 +10,17 @@ body {
     height: 100%;
 }
 
+.opacity-50-hover:hover { 
+  opacity: .5 !important; 
+}
 .bg-azul{
   background: rgb(0, 35, 125);
 }
 .bg-azul-subtle {
   background: rgb(205, 210, 225);
 }
-
 /* NAVBAR */
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link.active {
+.navbar-nav .nav-link:hover {
   color: #FFF;
 }
 .navbar-nav .nav-link.active {
@@ -46,20 +47,16 @@ body {
   content: none !important;
 }
 /* FIM NAVBAR */
-
 /* Defina o background que será aplicado quando o collapse estiver ativo */
 @media (max-width: 991px) {
-  .navbar-collapse {
-    background-color: transparent; /* Defina a cor de fundo inicial */
-    transition: background-color 0.0s; /* Adicione a transição para suavizar a mudança de cor */
+  .navbar-nav .nav-link:hover, 
+  .navbar-nav .nav-link:active{
+    color: rgba(0, 0, 0, 0.5);
   }
-  .navbar-collapse.show {
-    background-color: #495057; /* Defina a cor de fundo quando o collapse estiver ativo */
-    padding: 0.5rem !important;
-  }
+  .navbar-nav .nav-link:hover::before {
+    width: 0;
 }
-
-
+}
 /* CAROUSEL */
 .c-item {
   height: 480px;

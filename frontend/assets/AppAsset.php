@@ -1,5 +1,4 @@
 <?php
-
 namespace frontend\assets;
 
 use yii\web\AssetBundle;
@@ -14,4 +13,8 @@ class AppAsset extends AssetBundle
     public $css = [
         'css/site.css',
     ];
+    public $js = [
+        'https://code.jquery.com/jquery-3.6.0.min.js', // Adicione esta linha para incluir o jQuery
+    ];
 }
+
