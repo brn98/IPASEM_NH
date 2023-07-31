@@ -39,38 +39,37 @@ $this->beginPage();
 
     <?php $this->endBody() ?>
 
-    <!-- JavaScript para mostrar o menu dropdown no hover -->
     <script>
-        $(document).ready(function () {
-            // Verifique se o tamanho da tela é maior que md (media query do Bootstrap)
-            if ($(window).width() > 767) {
-                // Encontre todos os itens de menu que possuem subitens
-                var dropdownItems = $('.navbar-nav .nav-item.dropdown');
+        if (window.matchMedia("(min-width: 768px)").matches) {
+            var dropdownItems = document.querySelectorAll('.navbar-nav .dropdown');
 
-                // Adicione o evento de hover nesses itens
-                dropdownItems.hover(function () {
-                    // Encontre o menu dropdown dentro do item atual e mostre-o
-                    $(this).find('.dropdown-menu').addClass('show');
-                }, function () {
-                    // Quando o hover é removido, esconda o menu dropdown
-                    $(this).find('.dropdown-menu').removeClass('show');
+            dropdownItems.forEach(function (item) {
+                item.addEventListener('mouseenter', function () {
+                    if (this.querySelector('.dropdown-toggle')) {
+                        this.querySelector('.dropdown-menu').classList.add('show');
+                    }
                 });
 
-                // Adicione o evento de hover nos subitens do menu
-                var dropdownSubItems = $('.navbar-nav .dropdown-menu .dropdown-item');
-                dropdownSubItems.hover(function () {
-                    // Encontre o menu dropdown pai e adicione a classe show
-                    $(this).closest('.dropdown').addClass('show');
-                }, function () {
-                    // Quando o hover é removido, remova a classe show do menu dropdown pai
-                    $(this).closest('.dropdown').removeClass('show');
+                item.addEventListener('mouseleave', function () {
+                    this.querySelector('.dropdown-menu').classList.remove('show');
                 });
+            });
+        } else {
+            $('.navbar-nav .dropdown .dropdown-toggle').on('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                $(this).siblings('.dropdown-menu').classList.add('show');
+            });
 
-                console.log('O código JavaScript está sendo executado!');
-            }
-        });
-
+            $(document).on('click', function (e) {
+                if ($('.navbar-nav').has(e.target).length === 0) {
+                    $('.dropdown-menu').classList.remove('show');
+                }
+            });
+        }
     </script>
+
+
 
 </body>
 
