@@ -69,8 +69,6 @@ $this->beginPage();
         }
     </script>
 
-
-
 </body>
 
 </html>
