@@ -25,7 +25,7 @@ $this->registerJsFile('@web/js/script.js', ['position' => View::POS_END]);
         <nav class="navbar navbar-expand-lg py-0">
             <div class="container">
                 <a class="navbar-brand p-0 m-0" href="#"><img src="<?= Yii::getAlias('@web') ?>/images/logo.png"
-                        alt="Logo" style='max-width: 115px; height: auto;'></a>                
+                        alt="Logo" style='max-width: 115px; height: auto;'></a>
                 <div class="offcanvas offcanvas-end w-50 flex-lg-row" tabindex="-1" id="navbarOffcanvasLg"
                     aria-labelledby="navbarOffcanvasLgLabel">
                     <?php
