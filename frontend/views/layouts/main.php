@@ -7,6 +7,7 @@ use yii\web\YiiAsset;
 use yii\bootstrap5\BootstrapPluginAsset;
 use yii\web\View;
 
+
 YiiAsset::register($this);
 BootstrapPluginAsset::register($this);
 AppAsset::register($this);
