@@ -1,4 +1,4 @@
-if (window.matchMedia("(min-width: 768px)").matches) {
+if (window.matchMedia("(min-width: 992px)").matches) {
   var dropdownItems = document.querySelectorAll(".navbar-nav .dropdown");
 
   dropdownItems.forEach(function (item) {
@@ -13,15 +13,19 @@ if (window.matchMedia("(min-width: 768px)").matches) {
     });
   });
 } else {
+    var dropdownItems = document.querySelectorAll(".navbar-nav .dropdown");
+
   $(".navbar-nav .dropdown .dropdown-toggle").on("click", function (e) {
-    e.preventDefault();
     e.stopPropagation();
     $(this).siblings(".dropdown-menu").classList.add("show");
   });
 
-  $(document).on("click", function (e) {
-    if ($(".navbar-nav").has(e.target).length === 0) {
-      $(".dropdown-menu").classList.remove("show");
-    }
+  document.addEventListener("click", function (event) {
+    dropdownItems.forEach(function (item) {
+      var submenu = item.querySelector(".dropdown-menu");
+      if (!item.contains(event.target)) {
+        submenu.classList.remove("show");
+      }
+    });
   });
 }
