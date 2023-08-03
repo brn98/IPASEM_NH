@@ -7,26 +7,33 @@
     </div>
     <div class="carousel-inner">
         <div class="carousel-item active c-item">
-            <img src="<?= Yii::getAlias('@web') ?>/images/teste1.png" class="d-block w-100 h-100 object-fit-cover c-img"
-                alt="image1">
-            <div class="carousel-caption">
-                <p class="fs-3 fw-bold  text-uppercase">Discover the hidden world</p>
-                <p class="text-capitalize d-none d-lg-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a pellentesque lectus. Cras id
-                    tincidunt massa. Aenean tristique ultrices ipsum ac tempor. Morbi et vulputate diam, sit amet tempor
-                    lectus. Sed eget mi hendrerit, tincidunt nisi a, tincidunt nisi. Praesent tincidunt pellentesque
-                    lacinia. Proin dapibus, odio in vestibulum ultricies, mi felis tempor felis, quis blandit quam quam
-                    eget diam. Donec dolor felis, iaculis nec augue ac, mollis faucibus nisi. Etiam auctor semper
-                    suscipit. Ut rhoncus condimentum lorem eu rutrum. Proin quam nulla, pellentesque vel convallis eu,
-                    accumsan sed neque. In euismod nisi ex, sed lacinia felis vestibulum vel. In rhoncus tellus quis
-                    luctus molestie. Duis ac elit elit.</p>
-            </div>
+            <a href="https://novohamburgo.atende.net/?pg=transparencia#!" class="text-decoration-none">
+                <img src="<?= Yii::getAlias('@web') ?>/images/teste1.png"
+                    class="d-block w-100 h-100 object-fit-cover c-img" alt="image1">
+                <div class="carousel-caption">
+                    <p class="fs-3 fw-bold text-uppercase">Discover the hidden world</p>
+                    <p class="d-none d-lg-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a
+                        pellentesque lectus. Cras id
+                        tincidunt massa. Aenean tristique ultrices ipsum ac tempor. Morbi et vulputate diam, sit amet
+                        tempor
+                        lectus. Sed eget mi hendrerit, tincidunt nisi a, tincidunt nisi. Praesent tincidunt pellentesque
+                        lacinia. Proin dapibus, odio in vestibulum ultricies, mi felis tempor felis, quis blandit quam
+                        quam
+                        eget diam. Donec dolor felis, iaculis nec augue ac, mollis faucibus nisi. Etiam auctor semper
+                        suscipit. Ut rhoncus condimentum lorem eu rutrum. Proin quam nulla, pellentesque vel convallis
+                        eu,
+                        accumsan sed neque. In euismod nisi ex, sed lacinia felis vestibulum vel. In rhoncus tellus quis
+                        luctus molestie. Duis ac elit elit.</p>
+                </div>
+            </a>
         </div>
         <div class="carousel-item c-item">
             <img src="<?= Yii::getAlias('@web') ?>/images/teste2.jpg" class="d-block w-100 h-100 object-fit-cover c-img"
                 alt="image2">
-                <div class="carousel-caption">
+            <div class="carousel-caption">
                 <p class="fs-3 fw-bold text-uppercase">Discover the hidden world</p>
-                <p class="text-capitalize d-none d-lg-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a pellentesque lectus. Cras id
+                <p class=" d-none d-lg-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a
+                    pellentesque lectus. Cras id
                     tincidunt massa. Aenean tristique ultrices ipsum ac tempor. Morbi et vulputate diam, sit amet tempor
                     lectus. Sed eget mi hendrerit, tincidunt nisi a, tincidunt nisi. Praesent tincidunt pellentesque
                     lacinia. Proin dapibus, odio in vestibulum ultricies, mi felis tempor felis, quis blandit quam quam
@@ -39,9 +46,10 @@
         <div class="carousel-item c-item">
             <img src="<?= Yii::getAlias('@web') ?>/images/teste3.jpg" class="d-block w-100 h-100 object-fit-cover c-img"
                 alt="image3">
-                <div class="carousel-caption">
+            <div class="carousel-caption">
                 <p class="fs-3 fw-bold text-uppercase">Discover the hidden world</p>
-                <p class="text-capitalize d-none d-lg-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a pellentesque lectus. Cras id
+                <p class="d-none d-lg-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a
+                    pellentesque lectus. Cras id
                     tincidunt massa. Aenean tristique ultrices ipsum ac tempor. Morbi et vulputate diam, sit amet tempor
                     lectus. Sed eget mi hendrerit, tincidunt nisi a, tincidunt nisi. Praesent tincidunt pellentesque
                     lacinia. Proin dapibus, odio in vestibulum ultricies, mi felis tempor felis, quis blandit quam quam

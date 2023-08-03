@@ -28,7 +28,11 @@ use yii\bootstrap5\Nav;
                     <?php
                     echo Nav::widget([
                         'items' => [
-                            ['label' => 'Início', 'url' => ['/site/index']],
+                            [
+                                'label' => 'Início',
+                                'options' => ['class' => 'dropdown'],
+                                'url' => ['/site/index']
+                            ],
                             [
                                 'label' => 'O Ipasem',
                                 'items' => [

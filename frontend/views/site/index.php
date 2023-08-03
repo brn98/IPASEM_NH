@@ -1,3 +1,5 @@
+<?= $this->render('/layouts/_modal') ?>
+
 <?= $this->render('/layouts/_carousel') ?>
 
 <div class="container text-center d-flex justify-content-center">
