@@ -39,6 +39,8 @@ $this->beginPage();
         <?= $content ?>
     </main>
 
+    <?= $this->render('_footer') ?>
+
     <?php $this->endBody() ?>
 
     <?php $this->registerJsFile('@web/js/script.js', ['position' => View::POS_END]); ?>
