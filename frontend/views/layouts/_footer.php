@@ -1,3 +1,8 @@
+<?php
+use yii\bootstrap5\Html;
+
+?>
+
 <footer class="bg-azul-subtle">
     <div class="bg-azul py-1"></div>
     <div class="container-fluid w-75 shadow">
@@ -20,11 +25,21 @@
                 <div class="col text my-auto">
                     <div class="h4 fw-semibold">Navegação</div>
                     <ul class="list-unstyled text-dark py-2">
-                        <li>Sobre Nós</li>
-                        <li>Serviços</li>
-                        <li>Notícias</li>
-                        <li>Perguntas Frequentes</li>
-                        <li>Notícias</li>
+                        <li class="py-2">
+                            <?= Html::a('<i class="opacity-07 fa fa-search-plus"></i> Transparência', ['/site/transparencia'], ['class' => 'text-decoration-none opacity-50-hover']) ?>
+                        </li>
+                        <li class="pb-2">
+                            <?= Html::a('<i class="opacity-07 fa fa-headphones"></i> Ouvidoria', ['/site/button2'], ['class' => 'text-decoration-none opacity-50-hover']) ?>
+                        </li>
+                        <li class="pb-2">
+                            <?= Html::a('<i class="opacity-07 fa fa-wheelchair"></i> Acessibilidade', ['/site/button3'], ['class' => 'text-decoration-none opacity-50-hover']) ?>
+                        </li>
+                        <li class="pb-2">
+                            <?= Html::a('<i class="opacity-07 fa fa-sitemap"></i> Mapa site', ['/site/button4'], ['class' => 'text-decoration-none opacity-50-hover']) ?>
+                        </li>
+                        <li class="pb-2">
+                            <?= Html::a('<i class="opacity-07 fa fa-phone"></i> Contato', ['/site/button4'], ['class' => 'text-decoration-none opacity-50-hover']) ?>
+                        </l>
                     </ul>
                 </div>
                 <div class="col d-flex align-items-center px-0">
