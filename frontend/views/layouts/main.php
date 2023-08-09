@@ -16,36 +16,33 @@ $this->beginPage();
 ?>
 
 <!DOCTYPE html>
-<html lang="<?= Yii::$app->language ?>" class="h-100 w-100">
+<html lang="<?= Yii::$app->language ?>" class="">
 <?= $this->render('_head') ?>
 
-<body class="d-flex flex-column h-100">
 
-    <?php $this->beginBody() ?>
+<?php $this->beginBody() ?>
 
-    <?= $this->render('_header') ?>
+<?= $this->render('_header') ?>
 
-    <main role="main" class="flex-shrink-0">
-        <div class="container">
-            <?= Breadcrumbs::widget([
-                'homeLink' => [
-                    'label' => Yii::t('yii', 'Inicio'),
-                    'url' => Yii::$app->homeUrl,
-                ],
-                'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-            ]) ?>
-            <?= Alert::widget() ?>
-        </div>
-        <?= $content ?>
-    </main>
+<main role="main" class="flex-shrink-0">
+    <div class="container">
+        <?= Breadcrumbs::widget([
+            'homeLink' => [
+                'label' => Yii::t('yii', 'Inicio'),
+                'url' => Yii::$app->homeUrl,
+            ],
+            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+        ]) ?>
+        <?= Alert::widget() ?>
+    </div>
+    <?= $content ?>
+</main>
 
-    <?= $this->render('_footer') ?>
+<?= $this->render('_footer') ?>
 
-    <?php $this->endBody() ?>
+<?php $this->endBody() ?>
 
-    <?php $this->registerJsFile('@web/js/script.js', ['position' => View::POS_END]); ?>
-
-</body>
+<?php $this->registerJsFile('@web/js/script.js', ['position' => View::POS_END]); ?>
 
 </html>
 
