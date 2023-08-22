@@ -39,7 +39,7 @@ use yii\bootstrap5\Html;
                         </li>
                         <li class="pb-2">
                             <?= Html::a('<i class="opacity-07 fa fa-phone"></i> Contato', ['/site/button4'], ['class' => 'text-decoration-none opacity-50-hover']) ?>
-                        </l>
+                        </li>
                     </ul>
                 </div>
                 <div class="col d-flex align-items-center px-0">
