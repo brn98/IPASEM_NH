@@ -36,28 +36,7 @@ use yii\bootstrap5\Nav;
                             [
                                 'label' => 'O Ipasem',
                                 'items' => [
-                                    ['label' => 'Section 1', 'url' => '/'],
-                                    ['label' => 'Section 2', 'url' => '#'],
-                                    [
-                                        'label' => 'Section 3',
-                                        'items' => [
-                                            ['label' => 'Section 3.1', 'url' => '/'],
-                                            ['label' => 'Section 3.2', 'url' => '#'],
-                                            [
-                                                'label' => 'Section 3.3',
-                                                'items' => [
-                                                    ['label' => 'Section 3.3.1', 'url' => '/'],
-                                                    ['label' => 'Section 3.3.2', 'url' => '#'],
-                                                ],
-                                            ],
-                                        ],
-                                    ],
-                                ],
-                            ],
-                            [
-                                'label' => 'Conceitos',
-                                'items' => [
-                                    ['label' => 'Section 1', 'url' => '/'],
+                                    ['label' => 'Conceitos', 'url' => '/'],
                                     ['label' => 'Section 2', 'url' => '#'],
                                     [
                                         'label' => 'Section 3',
@@ -117,29 +96,8 @@ use yii\bootstrap5\Nav;
                                     ],
                                 ],
                             ],
-                            [
-                                'label' => 'Editais',
-                                'items' => [
-                                    ['label' => 'Section 1', 'url' => '/'],
-                                    ['label' => 'Section 2', 'url' => '#'],
-                                    [
-                                        'label' => 'Section 3',
-                                        'items' => [
-                                            ['label' => 'Section 3.1', 'url' => '/'],
-                                            ['label' => 'Section 3.2', 'url' => '#'],
-                                            [
-                                                'label' => 'Section 3.3',
-                                                'items' => [
-                                                    ['label' => 'Section 3.3.1', 'url' => '/'],
-                                                    ['label' => 'Section 3.3.2', 'url' => '#'],
-                                                ],
-                                            ],
-                                        ],
-                                    ],
-                                ],
-                            ],
                         ],
-                        'options' => ['class' => 'navbar-nav mx-lg-auto mx-2 column-gap-3 text-uppercase fw-bold'],
+                        'options' => ['class' => 'navbar-nav ms-lg-5 mx-2 column-gap-3 text-uppercase fw-bold'],
                         'encodeLabels' => false, // Para não codificar os rótulos HTML
                     ]);
                     ?>

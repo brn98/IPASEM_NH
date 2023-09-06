@@ -16,7 +16,7 @@ $this->beginPage();
 ?>
 
 <!DOCTYPE html>
-<html lang="<?= Yii::$app->language ?>" class="">
+<html lang="<?= Yii::$app->language ?>">
 <?= $this->render('_head') ?>
 
 

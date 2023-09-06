@@ -38,10 +38,11 @@ $this->params['breadcrumbs'][] = ['label' => 'Transparência'];
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-12 shadow h-100 d-inline-block py-2">
+        <div class="col-lg-3 col-md-6 col-12 shadow h-100 d-inline-block py-2 rounded">
             <h1 class=""
-                style="font-size: clamp(16px, 1.2vw, 20px); padding: 10px; margin-bottom: 0px; color: rgb(0, 35, 125); border-bottom: 2px solid rgb(214, 213, 213);">
+                style="font-size: clamp(16px, 1.2vw, 20px); color: rgb(0, 35, 125);">
                 Veja Também</h1>
+                <hr>
             <?= $this->render('../layouts/_sidebar') ?>
         </div>
     </div>

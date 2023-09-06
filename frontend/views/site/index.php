@@ -83,103 +83,43 @@
 </div>
 <!-- cards de noticias -->
 <div class="container my-3">
-    <div class="row">
-        <div class="col">
-            <div class="card" style="width: 18rem;">
-                <img src="<?= Yii::getAlias('@web') ?>/images/crp.jpg" alt="Apple Store" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">Renovado CRP por mais 180 dias!</h5>
-                    <p class="card-text">Novo Hamburgo, por meio do Ipasem-NH, renova CRP por mais 180 diasO município
-                        de Novo Hamburgo, por meio do Ipas... </p>
-                    <a href="#" class="btn btn-primary">Acesse</a>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Descrição</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td class="custom-truncate">Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Etiam quis vestibulum turpis. Pellentesque gravida, ante nec molestie malesuada, odio nunc
+                    venenatis purus, at pulvinar mi elit eget ligula. Etiam blandit aliquet rhoncus. Aenean non urna mi.
+                    Sed nec libero non justo vehicula lobortis quis quis dui. Mauris vel justo nec mi ultrices porta.
+                    Fusce id dignissim quam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+                    cubilia curae; Proin lobortis elementum dui et iaculis. Etiam molestie, ipsum non mattis
+                    pellentesque, ex massa finibus nisl, sed dictum justo quam non ex. Integer massa dui, tincidunt a
+                    est sed, eleifend semper lacus.</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis vestibulum turpis. Pellentesque
+                    gravida, ante nec molestie malesuada, odio nunc venenatis purus, at pulvinar mi elit eget ligula.
+                    Etiam blandit aliquet rhoncus. Aenean non urna mi. Sed nec libero non justo vehicula lobortis quis
+                    quis dui. Mauris vel justo nec mi ultrices porta. Fusce id dignissim quam. Vestibulum ante ipsum
+                    primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin lobortis elementum dui et
+                    iaculis. Etiam molestie, ipsum non mattis pellentesque, ex massa finibus nisl, sed dictum justo quam
+                    non ex. Integer massa dui, tincidunt a est sed, eleifend semper lacus.</td>
+            </tr>
+            <!-- Mais linhas da tabela... -->
+        </tbody>
+    </table>
 
-<!-- tabele de noticias -->
-<div class="container my-3">
-    <p class="d-flex justify-content-end m-0">
-        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
-            aria-expanded="false" aria-controls="collapseExample">
-            Nóticias antigas +
-        </button>
-    </p>
-    <div class="collapse" id="collapseExample">
-        <table class="table">
-            <tbody>
-                <tr>
-                    <td>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="https://cadprev.previdencia.gov.br/Cadprev/pages/publico/extrato/extratoExterno.xhtml?cnpj=88254875000160"
-                            target="_blank">
-                            <img src="<?= Yii::getAlias('@web') ?>/images/comp_renda.jpg" alt="comp_renda" class="mx-4"
-                                style="max-width: 115px; height: auto;">Disponíveis comprovantes de
-                            renda e detalhamento
-                            de
-                            coparticipação para Imposto de Renda
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="https://cadprev.previdencia.gov.br/Cadprev/pages/publico/extrato/extratoExterno.xhtml?cnpj=88254875000160"
-                            target="_blank">
-                            <img src="<?= Yii::getAlias('@web') ?>/images/comp_renda.jpg" alt="comp_renda" class="mx-4"
-                                style="max-width: 115px; height: auto;">Disponíveis comprovantes de
-                            renda e detalhamento
-                            de
-                            coparticipação para Imposto de Renda
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="https://cadprev.previdencia.gov.br/Cadprev/pages/publico/extrato/extratoExterno.xhtml?cnpj=88254875000160"
-                            target="_blank">
-                            Veja mais
-                        </a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <hr>
 </div>
+<style>
+    .custom-truncate {
+        max-width: 500px; /* Defina a largura máxima desejada */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+</style>
