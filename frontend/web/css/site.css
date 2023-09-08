@@ -13,7 +13,7 @@ body {
 .opacity-50-hover:hover {
   opacity: 0.5 !important;
 }
-.mt-n5{
+.mt-n5 {
   margin-top: -2.25rem !important;
 }
 .bg-azul {
@@ -54,15 +54,15 @@ header .dropdown-toggle::after {
   .navbar-nav .nav-link:hover::before {
     width: 0;
   }
-  header .navbar-expand-lg .navbar-nav .dropdown-menu{
+  header .navbar-expand-lg .navbar-nav .dropdown-menu {
     padding-bottom: 0px;
   }
   .mt-n5 {
     margin-top: -1.5rem !important;
-}
+  }
 }
 @media (min-width: 992px) {
-  header .navbar-expand-lg .navbar-nav .dropdown-menu{
+  header .navbar-expand-lg .navbar-nav .dropdown-menu {
     margin-left: 90%;
     margin-top: -30px;
   }
@@ -82,5 +82,11 @@ header .dropdown-toggle::after {
 }
 /* END CAROUSEL */
 /* LANDING PAGE */
+.hover-grow {
+  transition: transform 0.2s ease; /* Adiciona uma transição suave */
+}
 
+.hover-grow:hover {
+  transform: scale(1.10); /* Aumenta em 5% ao passar o mouse */
+}
 /* FIM LANDINGPAGE */

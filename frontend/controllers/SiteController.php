@@ -79,26 +79,32 @@ class SiteController extends Controller
     }
 
     public function actionTransparencia()
-{
-    // Renderize o conteúdo em uma view parcial
-    return $this->render('transparencia');
-}
+    {
+        // Renderize o conteúdo em uma view parcial
+        return $this->render('transparencia');
+    }
 
-    
+    public function actionPortais()
+    {
+        // Renderize o conteúdo em uma view parcial
+        return $this->render('portais');
+    }
+
+
     public function actionSearch()
     {
         $searchText = Yii::$app->request->post('search');
-    
+
         // Verifique se o formulário foi enviado
         if ($searchText !== null) {
             // Execute sua função de pesquisa aqui
             // ...
             // Faça algo com os resultados da pesquisa
-    
+
             // Redirecione para outra página ou renderize a mesma página com os resultados da pesquisa
             return $this->redirect(['search/results', 'searchText' => $searchText]);
         }
-    
+
         // Renderize a visualização normalmente
         return $this->render('search');
     }

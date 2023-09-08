@@ -24,18 +24,24 @@ $this->beginPage();
 
 <?= $this->render('_header') ?>
 
-<main role="main" class="flex-shrink-0">
-    <div class="container">
-        <?= Breadcrumbs::widget([
-            'homeLink' => [
-                'label' => Yii::t('yii', 'Inicio'),
-                'url' => Yii::$app->homeUrl,
-            ],
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= Alert::widget() ?>
+<main role="main">
+    <div class="container position-relative">
+        <div class="position-absolute">
+            <?= Breadcrumbs::widget([
+                'homeLink' => [
+                    'label' => Yii::t('yii', 'Inicio'),
+                    'url' => Yii::$app->homeUrl,
+                ],
+                'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+            ]) ?>
+        </div>
     </div>
     <?= $content ?>
+    <div class="position-sticky bottom-0 text-end">
+        <a class="me-4" id="backTop" href="#">
+            <div class="btn btn-warning rounded-circle p-3 mb-3"> <i class="fas fa-chevron-up p-2"></i></div>
+        </a>
+    </div>
 </main>
 
 <?= $this->render('_footer') ?>

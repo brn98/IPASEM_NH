@@ -21,7 +21,7 @@ use yii\bootstrap5\Nav;
     <div class="bg-azul-subtle">
         <nav class="navbar navbar-expand-lg py-0">
             <div class="container">
-                <a class="navbar-brand p-0 m-0" href="#"><img src="<?= Yii::getAlias('@web') ?>/images/logo.png"
+                <a class="navbar-brand p-0 m-0" href="<?= \yii\helpers\Url::to(['/site/index']) ?>"><img src="<?= Yii::getAlias('@web') ?>/images/logo.png"
                         alt="Logo" style='max-width: 115px; height: auto;'></a>
                 <div class="offcanvas offcanvas-end w-50 flex-lg-row" tabindex="-1" id="navbarOffcanvasLg"
                     aria-labelledby="navbarOffcanvasLgLabel">
@@ -113,7 +113,7 @@ use yii\bootstrap5\Nav;
                 <div class="ms-auto me-2 me-lg-0">
                     <?php if (Yii::$app->user->isGuest): ?>
                         <div class="d-flex justify-content-end">
-                            <?= Html::a('Portais', ['/site/login'], ['class' => ['btn btn-primary login text-decoration-none']]) ?>
+                            <?= Html::a('Portais', ['/site/portais'], ['class' => ['btn btn-primary login text-decoration-none']]) ?>
                         </div>
                     <?php else: ?>
                         <div class="d-flex justify-content-end">

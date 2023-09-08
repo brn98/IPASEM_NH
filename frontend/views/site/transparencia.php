@@ -7,10 +7,17 @@ use yii\bootstrap5\Html;
 
 
 $this->title = 'Transparência';
-$this->params['breadcrumbs'][] = ['label' => 'Transparência'];
+$this->params['breadcrumbs'][] = $this->title;
 ?>
 
-<div class="container my-5">
+<div class="container">
+    <div id="simple-list-example">
+        <div class="row">
+            <div class="col d-flex justify-content-end">
+                <a class="p-1 rounded me-5" href="#simple-list-item-1">Precisa de ajuda?</a>
+            </div>
+        </div>
+    </div>
     <div class="row justify-content-between">
         <div class="col-lg-8 col-md-7 col-12">
             <div class="ms-5">
@@ -39,11 +46,29 @@ $this->params['breadcrumbs'][] = ['label' => 'Transparência'];
             </div>
         </div>
         <div class="col-lg-3 col-md-6 col-12 shadow h-100 d-inline-block py-2 rounded">
-            <h1 class=""
-                style="font-size: clamp(16px, 1.2vw, 20px); color: rgb(0, 35, 125);">
+            <h1 class="" style="font-size: clamp(16px, 1.2vw, 20px); color: rgb(0, 35, 125);">
                 Veja Também</h1>
-                <hr>
-            <?= $this->render('../layouts/_sidebar') ?>
+            <hr>
+            <aside>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button fw-semibold" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne">
+                                Informações de Aposentados e Pensionistas
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <a href="https://www.ipasemnh.com.br/publicacoesRH/66.pdf" target="_blank"
+                                    class="noChange">
+                                    Relação de Aposentados e Pensionistas Ref. 06/2023</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
         </div>
     </div>
 </div>

@@ -28,4 +28,32 @@ if (window.matchMedia("(min-width: 992px)").matches) {
       }
     });
   });
+  
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  const backTopBtn = document.getElementById("backTop");
+
+  // Esconde o botão inicialmente
+  backTopBtn.style.opacity = "0";
+  backTopBtn.style.transition = "opacity 0.3s ease-in-out"; // Adiciona uma transição suave
+
+  // Verifica a posição ao rolar a página
+  window.addEventListener("scroll", function() {
+    // Verifica se o usuário rolou a página para baixo
+    if (window.scrollY > 300) {
+      backTopBtn.style.opacity = "1"; // Mostra o botão suavemente
+    } else {
+      backTopBtn.style.opacity = "0"; // Esconde o botão suavemente
+    }
+  });
+
+  // Adiciona um evento de clique para rolar suavemente ao topo
+  backTopBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+});
