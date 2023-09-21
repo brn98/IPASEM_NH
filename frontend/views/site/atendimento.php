@@ -127,10 +127,12 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
             </div>
         </div>
+        <div class="card">
 
-    <div class="card" style="width: 18rem;">
-        <div class="card-body">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3466.131932292883!2d-51.13747112421412!3d-29.686954414791508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951943a8f7a32339%3A0x4929904d0d68df2b!2sInstituto%20de%20Previd%C3%AAncia%20e%20Assist%C3%AAncia%20dos%20Servidores%20Municipais%20de%20Novo%20Hamburgo!5e0!3m2!1spt-BR!2sbr!4v1695299767299!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-    </div>
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
 </div>
