@@ -1,9 +1,6 @@
 <?php
 
 /** @var yii\web\View $this */
-/** @var yii\bootstrap5\ActiveForm $form */
-
-use yii\bootstrap5\Html;
 
 
 $this->title = 'Transparência';
@@ -11,7 +8,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <div class="container">
-    <div id="simple-list-example">
+<div id="simple-list-example">
         <div class="row">
             <div class="col d-flex justify-content-end">
                 <a class="p-1 rounded me-5" href="#simple-list-item-1">Precisa de ajuda?</a>
@@ -21,8 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="row justify-content-between">
         <div class="col-lg-8 col-md-7 col-12">
             <div class="ms-5">
-                <h1 class="mb-1" style="font-size: clamp(18px, 1.5vw, 24px); color: rgb(0, 35, 125);">Portal da
-                    Transparência</h1>
+                <div class="h2 text-azul">Portal da Transparência</div>
                 <hr class="mt-2" style="background-color: rgb(208, 67, 71);">
             </div>
             <div class="mt-4">
@@ -50,16 +46,17 @@ $this->params['breadcrumbs'][] = $this->title;
                 Veja Também</h1>
             <hr>
             <aside>
-                <div class="accordion" id="accordionExample">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
                     <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button fw-semibold" data-bs-toggle="collapse"
-                                data-bs-target="#collapseOne">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
                                 Informações de Aposentados e Pensionistas
                             </button>
                         </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show"
-                            data-bs-parent="#accordionExample">
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <a href="https://www.ipasemnh.com.br/publicacoesRH/66.pdf" target="_blank"
                                     class="noChange">

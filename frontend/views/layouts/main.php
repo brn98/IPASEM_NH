@@ -1,6 +1,5 @@
 <?php
 
-use common\widgets\Alert;
 use frontend\assets\AppAsset;
 use yii\bootstrap5\Breadcrumbs;
 use yii\web\YiiAsset;
@@ -37,11 +36,6 @@ $this->beginPage();
         </div>
     </div>
     <?= $content ?>
-    <div class="position-sticky bottom-0 text-end">
-        <a class="me-4" id="backTop" href="#">
-            <div class="btn btn-warning rounded-circle p-3 mb-3"> <i class="fas fa-chevron-up p-2"></i></div>
-        </a>
-    </div>
 </main>
 
 <?= $this->render('_footer') ?>

@@ -10,10 +10,10 @@ use yii\bootstrap5\Nav;
             <div class="row d-none d-md-block">
                 <div class="col-md d-flex justify-content-evenly">
                     <?= Html::a('<i class="opacity-07 fa fa-search-plus"></i> Transparência', ['/site/transparencia'], ['class' => 'text-decoration-none link-light opacity-50-hover']) ?>
-                    <?= Html::a('<i class="opacity-07 fa fa-headphones"></i> Ouvidoria', ['/site/button2'], ['class' => 'text-decoration-none link-light opacity-50-hover']) ?>
-                    <?= Html::a('<i class="opacity-07 fa fa-wheelchair"></i> Acessibilidade', ['/site/button3'], ['class' => 'text-decoration-none link-light opacity-50-hover']) ?>
-                    <?= Html::a('<i class="opacity-07 fa fa-sitemap"></i> Mapa site', ['/site/button4'], ['class' => 'text-decoration-none link-light opacity-50-hover']) ?>
-                    <?= Html::a('<i class="opacity-07 fa fa-phone"></i> Contato', ['/site/button4'], ['class' => 'text-decoration-none link-light opacity-50-hover']) ?>
+                    <?= Html::a('<i class="opacity-07 fa fa-headphones"></i> Ouvidoria', ['/site/ouvidoria'], ['class' => 'text-decoration-none link-light opacity-50-hover']) ?>
+                    <?= Html::a('<i class="opacity-07 fa fa-wheelchair"></i> Acessibilidade', ['/site/acessibilidade'], ['class' => 'text-decoration-none link-light opacity-50-hover']) ?>
+                    <?= Html::a('<i class="opacity-07 fa fa-sitemap"></i> Mapa site', ['/site/mapasite'], ['class' => 'text-decoration-none link-light opacity-50-hover']) ?>
+                    <?= Html::a('<i class="opacity-07 fa fa-phone"></i> Atendimento', ['/site/atendimento'], ['class' => 'text-decoration-none link-light opacity-50-hover']) ?>
                 </div>
             </div>
         </div>
@@ -21,8 +21,9 @@ use yii\bootstrap5\Nav;
     <div class="bg-azul-subtle">
         <nav class="navbar navbar-expand-lg py-0">
             <div class="container">
-                <a class="navbar-brand p-0 m-0" href="<?= \yii\helpers\Url::to(['/site/index']) ?>"><img src="<?= Yii::getAlias('@web') ?>/images/logo.png"
-                        alt="Logo" style='max-width: 115px; height: auto;'></a>
+                <a class="navbar-brand p-0 m-0" href="<?= \yii\helpers\Url::to(['/site/index']) ?>"><img
+                        src="<?= Yii::getAlias('@web') ?>/images/logo.png" alt="Logo"
+                        style='max-width: 115px; height: auto;'></a>
                 <div class="offcanvas offcanvas-end w-50 flex-lg-row" tabindex="-1" id="navbarOffcanvasLg"
                     aria-labelledby="navbarOffcanvasLgLabel">
                     <?php
@@ -111,20 +112,7 @@ use yii\bootstrap5\Nav;
                     </div>
                 </div>
                 <div class="ms-auto me-2 me-lg-0">
-                    <?php if (Yii::$app->user->isGuest): ?>
-                        <div class="d-flex justify-content-end">
-                            <?= Html::a('Portais', ['/site/portais'], ['class' => ['btn btn-primary login text-decoration-none']]) ?>
-                        </div>
-                    <?php else: ?>
-                        <div class="d-flex justify-content-end">
-                            <?= Html::beginForm(['/site/logout'], 'post', ['class' => 'd-flex']) ?>
-                            <?= Html::submitButton(
-                                'Logout (' . Yii::$app->user->identity->username . ')',
-                                ['class' => 'btn btn-primary-subtle logout text-decoration-none']
-                            ) ?>
-                            <?= Html::endForm() ?>
-                        </div>
-                    <?php endif; ?>
+                    <?= Html::a('Portais', ['/site/portais'], ['class' => ['btn btn-lg btn-warning text-decoration-none']]) ?>                    
                 </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg"

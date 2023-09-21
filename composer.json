@@ -1,3 +1,5 @@
+
+
 {
     "name": "yiisoft/yii2-app-advanced",
     "description": "Yii 2 Advanced Project Template",
@@ -46,7 +48,7 @@
         "dynamikaweb/php-brazil-info": "*",
         "yiibr/yii2-br-validator": "*",
         "edgardmessias/yii2-firebird": "*",
-        "mpdf/mpdf": "~8.0",
+        "mpdf/mpdf": "*",
         "kartik-v/yii2-field-range": "*",
         "kartik-v/yii2-date-range": "dev-master",
         "rmrevin/yii2-fontawesome": "*",

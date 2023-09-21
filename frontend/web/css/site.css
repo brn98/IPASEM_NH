@@ -7,7 +7,16 @@
 
 html,
 body {
-  height: 100vh !important;
+  height: 100% !important;
+}
+.link-hover {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.link-hover:hover {
+  color: #0d6efd;
 }
 
 .opacity-50-hover:hover {
@@ -21,6 +30,9 @@ body {
 }
 .bg-azul-subtle {
   background: rgb(205, 210, 225);
+}
+.text-azul {
+  color: rgb(0, 35, 125);
 }
 /* NAVBAR */
 .navbar-nav .nav-link:hover {
@@ -87,6 +99,33 @@ header .dropdown-toggle::after {
 }
 
 .hover-grow:hover {
-  transform: scale(1.10); /* Aumenta em 5% ao passar o mouse */
+  transform: scale(1.05); /* Aumenta em 5% ao passar o mouse */
 }
 /* FIM LANDINGPAGE */
+
+/* Truncate para quebra de linha do  */
+
+.custom-text-truncate {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Número de linhas antes do truncamento */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.bg-cinza {
+  background-color: #f0f0f0;
+}
+
+.text-disable {
+  color: #6e6e6e;
+}
+
+.mt-5-text {
+  margin-top: 115px; /* Ajuste o valor conforme necessário */
+}
+
+@media (max-width: 767px) {
+  .mt-5-text {
+    margin-top: 20px; /* Ajuste o valor desejado para dispositivos móveis */
+  }
+}

@@ -61,19 +61,41 @@ return [
 
             ],
         ],
-
-    ],  
+        'pdf' => [
+            'class' => 'Mpdf\Mpdf',
+        ],
+    ],
     'modules' => [
         'gii' => [
             'class' => 'yii\gii\Module',
-            'allowedIPs' => ['127.0.0.1', '::1', '192.9.200.118',]
+            'allowedIPs' => [
+                '127.0.0.1',
+                '::1',
+                '192.9.200.118',
+            ]
         ],
     ],
     'params' => $params,
-    
+
     'aliases' => [
         '@fortawesome/fontawesome-free' => '@vendor/components/font-awesome',
+        '@uploads' => '/var/www/html/uploads',
+    ],
+
+    'modules' => [
+        'datecontrol' => [
+            'class' => 'kartik\datecontrol\Module',
+            'displaySettings' => [
+                'date' => 'dd/MM/yyyy',
+                'time' => 'HH:mm',
+                'datetime' => 'dd/MM/yyyy HH:mm',
+            ],
+            'saveSettings' => [
+                'date' => 'php:Y-m-d',
+                'time' => 'php:H:i:s',
+                'datetime' => 'php:Y-m-d H:i:s',
+            ],
+        ],
+
     ],
 ];
-
-

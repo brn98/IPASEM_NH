@@ -15,6 +15,7 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use Mpdf\Mpdf;
 
 /**
  * Site controller
@@ -90,6 +91,50 @@ class SiteController extends Controller
         return $this->render('portais');
     }
 
+    public function actionEditais()
+    {
+        // Renderize o conteúdo em uma view parcial
+        return $this->render('editais');
+    }
+
+    public function actionGerarPdf($id, $isDiverse)
+    {
+        $subpasta = $isDiverse == 0 ? 'licitacoes' : 'editais';
+
+        $caminhoPdf = Yii::getAlias('@uploads/' . $subpasta . '/' . $id . '.pdf');
+
+        if (file_exists($caminhoPdf)) {
+            header('Content-type: application/pdf');
+
+            header('Content-Disposition: inline; filename="Edital - ' . basename($caminhoPdf) . '"');
+
+            readfile($caminhoPdf);
+        } else {
+            throw new NotFoundHttpException('O arquivo PDF não foi encontrado.');
+        }
+    }
+
+
+    public function actionAcessibilidade()
+    {
+        $dateTime = date('Y-m-d H:i:s'); // Obtém a data e hora atual no formato 'YYYY-MM-DD HH:MM:SS'
+
+        return $this->render('acessibilidade', [
+            'dateTime' => $dateTime,
+        ]);
+    }
+
+    public function actionMapasite()
+    {
+        // Renderize o conteúdo em uma view parcial
+        return $this->render('mapasite');
+    }
+
+    public function actionAtendimento()
+    {
+        // Renderize o conteúdo em uma view parcial
+        return $this->render('atendimento');
+    }
 
     public function actionSearch()
     {
