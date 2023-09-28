@@ -99,7 +99,7 @@ use yii\bootstrap5\Nav;
                             ],
                         ],
                         'options' => ['class' => 'navbar-nav ms-lg-5 mx-2 column-gap-3 text-uppercase fw-bold'],
-                        'encodeLabels' => false, // Para não codificar os rótulos HTML
+                        'encodeLabels' => false,
                     ]);
                     ?>
                     <div class="col-lg-3 ms-lg-auto ms-auto me-lg-4 me-2 mb-2 my-lg-auto">
@@ -112,7 +112,7 @@ use yii\bootstrap5\Nav;
                     </div>
                 </div>
                 <div class="ms-auto me-2 me-lg-0">
-                    <?= Html::a('Portais', ['/site/portais'], ['class' => ['btn btn-lg btn-warning text-decoration-none']]) ?>                    
+                    <?= Html::a('Portais', ['/site/portais'], ['class' => ['btn btn-lg btn-warning text-decoration-none']]) ?>
                 </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg"

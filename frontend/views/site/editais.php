@@ -8,7 +8,7 @@ if ($this->context->route != 'site/index') {
     $this->params['breadcrumbs'][] = $this->title = 'Editais';
 }
 
-$connection = Yii::$app->db3;
+$connection = Yii::$app->db;
 
 $itensPorPagina = 5;
 $paginaAtual = isset($_GET['pagina']) ? $_GET['pagina'] : 1;
@@ -30,17 +30,20 @@ $resultado = $connection->createCommand($sql)->queryAll();
             </div>
             <div class="col ms-2 small">
                 <i class="fas fa-file-alt text-primary-emphasis opacity-50 fs-5"></i>
-                <?= 
-                    Html::a("Número da Licitação:<br> {$licitacao['nome']}<br>", 
-                    [
-                    'gerar-pdf', 
-                    'id' => $licitacao['id'], 
-                    'isDiverse' => $licitacao['is_Diverse']
-                    ], 
-                    [
-                        'target' => '_blank','data-pjax' => '0',
-                    ]) 
-                ?>
+                <?=
+                    Html::a(
+                        "Número da Licitação:<br> {$licitacao['nome']}<br>",
+                        [
+                            'gerar-pdf',
+                            'id' => $licitacao['id'],
+                            'isDiverse' => $licitacao['is_Diverse']
+                        ],
+                        [
+                            'target' => '_blank',
+                            'data-pjax' => '0',
+                        ]
+                    )
+                    ?>
             </div>
             <div class="col ms-2 small">
                 <div class="row">

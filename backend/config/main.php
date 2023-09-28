@@ -11,11 +11,6 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
-    'modules' => [
-        'gii' => [
-            'class' => 'yii\gii\Module',
-        ],
-    ],
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-backend',
@@ -41,18 +36,24 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        /*
+        'view' => [
+            'theme' => [
+                'pathMap' => [
+                    '@backend/views' => '@backend/views',
+                ],
+            ],
+        ],
+        'assetManager' => [
+            'bundles' => [
+                \yii\bootstrap\BootstrapAsset::class => false
+            ],
+        ],
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-            ],
-        ],
-        */
-        'modules' => [
-            'gii' => [
-                'class' => 'yii\gii\Module',
-                'allowedIPs' => ['127.0.0.1', '::1'], // Limite de acesso apenas para IPs locais (recomendado)
+                'backend' => '/site/index',
+                '<action>' => '/site/<action>'
             ],
         ],
     ],

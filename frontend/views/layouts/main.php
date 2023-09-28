@@ -2,13 +2,7 @@
 
 use frontend\assets\AppAsset;
 use yii\bootstrap5\Breadcrumbs;
-use yii\web\YiiAsset;
-use yii\bootstrap5\BootstrapPluginAsset;
-use yii\web\View;
 
-
-YiiAsset::register($this);
-BootstrapPluginAsset::register($this);
 AppAsset::register($this);
 
 $this->beginPage();
@@ -42,7 +36,6 @@ $this->beginPage();
 
 <?php $this->endBody() ?>
 
-<?php $this->registerJsFile('@web/js/script.js', ['position' => View::POS_END]); ?>
 
 </html>
 

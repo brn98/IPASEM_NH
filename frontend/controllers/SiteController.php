@@ -97,6 +97,7 @@ class SiteController extends Controller
         return $this->render('editais');
     }
 
+
     public function actionGerarPdf($id, $isDiverse)
     {
         $subpasta = $isDiverse == 0 ? 'licitacoes' : 'editais';
@@ -113,7 +114,11 @@ class SiteController extends Controller
             throw new NotFoundHttpException('O arquivo PDF não foi encontrado.');
         }
     }
-
+    public function actionOuvidoria()
+    {
+        // Renderize o conteúdo em uma view parcial
+        return $this->render('ouvidoria');
+    }
 
     public function actionAcessibilidade()
     {
@@ -132,7 +137,6 @@ class SiteController extends Controller
 
     public function actionAtendimento()
     {
-        // Renderize o conteúdo em uma view parcial
         return $this->render('atendimento');
     }
 

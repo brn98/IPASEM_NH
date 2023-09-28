@@ -12,7 +12,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div id="simple-list-example">
         <div class="row">
             <div class="col d-flex justify-content-end">
-                <a class="p-1 rounded me-5" href="#simple-list-item-1">Precisa de ajuda?</a>
+                <a class="p-1 rounded me-5" href="atendimento">Precisa de ajuda?</a>
             </div>
         </div>
     </div>
@@ -79,7 +79,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <p class="text-center mt-3">Tanto o Portal de Assistência quanto o Portal de Previdência refletem nosso
                 compromisso com a eficiência e a transparência. Como um órgão público, estamos dedicados a fornecer
                 um serviço de qualidade que atenda às necessidades de nossos segurados. Para obter informações mais
-                detalhadas e orientações específicas, veja o nosso <a href="#simple-list-item-1">FAQ</a>. Estamos aqui
+                detalhadas e orientações específicas, veja o nosso <a href="atendimento">FAQ</a>. Estamos aqui
                 para tornar sua experiência conosco simples, segura e transparente.</p>
         </div>
     </div>

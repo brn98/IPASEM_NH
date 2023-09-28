@@ -36,29 +36,28 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-
+        'formatter' => [
+            'class' => 'yii\i18n\Formatter',
+            'timeZone' => 'America/Sao_Paulo',
+        ],
         'view' => [
             'class' => 'yii\web\View',
             'theme' => [
                 'pathMap' => [
                     '@frontend/views' => '@frontend/views',
                     '@common/widgets/views' => '@common/widgets/views',
-                    // outros caminhos mapeados
                 ],
             ],
         ],
-
+        'assetManager' => [
+            'bundles' => [
+            ],
+        ],
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                'home' => '/site/index',
-                '<controller:[-\w]+>/<action:[-\w]+>/<id:\d+>' => '<controller>/<action>',
-                '<controller:[-\w]+>/<action:[-\w]+>' => '<controller>/<action>',
-                '<controller:[-\w]+>' => '<controller>/index',
-                '/ordem/reimpressao' => 'ordem/reimpressao/index',
-                '/ordem/reimpressao/reimprimir' => 'ordem/reimpressao/reimprimir',
-
+                '/home' => '/site/index'
             ],
         ],
         'pdf' => [
@@ -80,22 +79,5 @@ return [
     'aliases' => [
         '@fortawesome/fontawesome-free' => '@vendor/components/font-awesome',
         '@uploads' => '/var/www/html/uploads',
-    ],
-
-    'modules' => [
-        'datecontrol' => [
-            'class' => 'kartik\datecontrol\Module',
-            'displaySettings' => [
-                'date' => 'dd/MM/yyyy',
-                'time' => 'HH:mm',
-                'datetime' => 'dd/MM/yyyy HH:mm',
-            ],
-            'saveSettings' => [
-                'date' => 'php:Y-m-d',
-                'time' => 'php:H:i:s',
-                'datetime' => 'php:Y-m-d H:i:s',
-            ],
-        ],
-
     ],
 ];

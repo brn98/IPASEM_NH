@@ -13,7 +13,7 @@ if (window.matchMedia("(min-width: 992px)").matches) {
     });
   });
 } else {
-    var dropdownItems = document.querySelectorAll(".navbar-nav .dropdown");
+  var dropdownItems = document.querySelectorAll(".navbar-nav .dropdown");
 
   $(".navbar-nav .dropdown .dropdown-toggle").on("click", function (e) {
     e.stopPropagation();
@@ -28,8 +28,19 @@ if (window.matchMedia("(min-width: 992px)").matches) {
       }
     });
   });
-  
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  var buttons = document.querySelectorAll('[data-bs-toggle="collapse"]');
+
+  buttons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      var icon = this.querySelector("i.rotate-icon");
+      icon.classList.toggle("rotate-down");
+    });
+  });
+});
 
 
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))

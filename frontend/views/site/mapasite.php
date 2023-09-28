@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="col ms-4">
                     <a class="link-hover text-decoration-none" data-bs-toggle="collapse" href="#collapseOipasem"
                         role="button " aria-expanded="false" aria-controls="collapseOipasem">
-                        <i class="fas fa-chevron-right text-primary-emphasis me-3 fa-sm"></i>Institucional
+                        <i class="fas fa-chevron-right text-primary-emphasis me-3 fa-sm rotate-icon"></i>Institucional
                     </a>
                     <hr class="mb-1 my-2 w-50 text-primary">
                     <div class="collapse ms-4" id="collapseOipasem">
@@ -47,6 +47,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <hr class="my-2 w-50 text-primary">
                     </div>
                 </div>
+
                 <div class="col ms-4">
                     <a class="link-hover" href="<?= \yii\helpers\Url::to(['/site/index']) ?>">
                         <i class="fas fa-minus text-primary-emphasis me-2"></i>Plano de Integridade
@@ -72,12 +73,12 @@ $this->params['breadcrumbs'][] = $this->title;
             <hr class="mb-1 my-2 w-75 text-primary">
             <div class="row-cols">
                 <div class="col ms-4">
-                    <a class="link-hover" data-bs-toggle="collapse" href="#collapseExample" role="button"
-                        aria-expanded="false" aria-controls="collapseExample">
-                        <i class="fas fa-chevron-right text-primary-emphasis me-3 fa-sm"></i>Institucional
+                    <a class="link-hover" data-bs-toggle="collapse" href="#collapseServicos" role="button"
+                        aria-expanded="false" aria-controls="collapseServicos">
+                        <i class="fas fa-chevron-right text-primary-emphasis me-3 fa-sm rotate-icon"></i>Institucional
                     </a>
                     <hr class="mb-1 my-2 w-50 text-primary">
-                    <div class="collapse ms-4" id="collapseExample">
+                    <div class="collapse ms-4" id="collapseServicos">
                         <a class="link-hover" href="<?= \yii\helpers\Url::to(['/site/index']) ?>">
                             <i class="fas fa-minus text-primary-emphasis me-2 fa-sm"></i>O Instituto
                         </a>
@@ -117,13 +118,13 @@ $this->params['breadcrumbs'][] = $this->title;
             <hr class="mb-1 my-2 w-75 text-primary">
             <div class="row-cols">
                 <div class="col ms-4">
-                    <a class="link-hover" data-bs-toggle="collapse" href="#collapseExample" role="button"
-                        aria-expanded="false" aria-controls="collapseExample">
-                        <i
-                            class="fas fa-chevron-right text-primary-emphasis text-primary-emphasis me-3 fa-sm"></i>Institucional
+                    <a class="link-hover" data-bs-toggle="collapse" href="#collapseAssistencia" role="button"
+                        aria-expanded="false" aria-controls="collapseAssistencia">
+                        <i <i
+                            class="fas fa-chevron-right text-primary-emphasis me-3 fa-sm rotate-icon"></i>Institucional
                     </a>
                     <hr class="mb-1 my-2 w-50 text-primary">
-                    <div class="collapse ms-4" id="collapseExample">
+                    <div class="collapse ms-4" id="collapseAssistencia">
                         <a class="link-hover" href="<?= \yii\helpers\Url::to(['/site/index']) ?>">
                             <i class="fas fa-minus text-primary-emphasis me-2 fa-sm"></i>O Instituto
                         </a>
@@ -163,12 +164,12 @@ $this->params['breadcrumbs'][] = $this->title;
             <hr class="mb-1 my-2 w-75 text-primary">
             <div class="row-cols">
                 <div class="col ms-4">
-                    <a class="link-hover" data-bs-toggle="collapse" href="#collapseExample" role="button"
-                        aria-expanded="false" aria-controls="collapseExample">
-                        <i class="fas fa-chevron-right text-primary-emphasis me-3 fa-sm"></i>Institucional
+                    <a class="link-hover" data-bs-toggle="collapse" href="#collapsePrevidencia" role="button"
+                        aria-expanded="false" aria-controls="collapsePrevidencia">
+                        <i class="fas fa-chevron-right text-primary-emphasis me-3 fa-sm rotate-icon"></i>Institucional
                     </a>
                     <hr class="mb-1 my-2 w-50 text-primary">
-                    <div class="collapse ms-4" id="collapseExample">
+                    <div class="collapse ms-4" id="collapsePrevidencia">
                         <a class="link-hover" href="<?= \yii\helpers\Url::to(['/site/index']) ?>">
                             <i class="fas fa-minus text-primary-emphasis me-2 fa-sm"></i>O Instituto
                         </a>
@@ -208,12 +209,12 @@ $this->params['breadcrumbs'][] = $this->title;
             <hr class="mb-1 my-2 w-75 text-primary">
             <div class="row-cols">
                 <div class="col ms-4">
-                    <a class="link-hover" data-bs-toggle="collapse" href="#collapseExample" role="button"
-                        aria-expanded="false" aria-controls="collapseExample">
-                        <i class="fas fa-chevron-right text-primary-emphasis me-3 fa-sm"></i>Institucional
+                    <a class="link-hover" data-bs-toggle="collapse" href="#collapseTransparencia" role="button"
+                        aria-expanded="false" aria-controls="collapseTransparencia">
+                        <i class="fas fa-chevron-right text-primary-emphasis me-3 fa-sm rotate-icon"></i>Institucional
                     </a>
                     <hr class="mb-1 my-2 w-50 text-primary">
-                    <div class="collapse ms-4" id="collapseExample">
+                    <div class="collapse ms-4" id="collapseTransparencia">
                         <a class="link-hover " href="<?= \yii\helpers\Url::to(['/site/index']) ?>">
                             <i class="fas fa-minus text-primary-emphasis me-2 fa-sm"></i>O Instituto
                         </a>
@@ -253,12 +254,12 @@ $this->params['breadcrumbs'][] = $this->title;
             <hr class="mb-1 my-2 w-75 text-primary">
             <div class="row-cols">
                 <div class="col ms-4">
-                    <a class="link-hover" data-bs-toggle="collapse" href="#collapseExample" role="button"
-                        aria-expanded="false" aria-controls="collapseExample">
-                        <i class="fas fa-chevron-right text-primary-emphasis me-3 fa-sm"></i>Institucional
+                    <a class="link-hover" data-bs-toggle="collapse" href="#collapseEditais" role="button"
+                        aria-expanded="false" aria-controls="collapseEditais">
+                        <i class="fas fa-chevron-right text-primary-emphasis me-3 fa-sm rotate-icon"></i>Institucional
                     </a>
                     <hr class="mb-1 my-2 w-50 text-primary">
-                    <div class="collapse ms-4" id="collapseExample">
+                    <div class="collapse ms-4" id="collapseEditais">
                         <a class="link-hover " href="<?= \yii\helpers\Url::to(['/site/index']) ?>">
                             <i class="fas fa-minus text-primary-emphasis me-2 fa-sm"></i>O Instituto
                         </a>
@@ -294,16 +295,16 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
         </div>
         <div class="col-md-3 mt-5">
-            <a class="text-primary text-decoration-none">Fale Conosco</a>
+            <a class="text-primary text-decoration-none">Atendimento</a>
             <hr class="mb-1 my-2 w-75 text-primary">
             <div class="row-cols">
                 <div class="col ms-4">
-                    <a class="link-hover" data-bs-toggle="collapse" href="#collapseExample" role="button"
-                        aria-expanded="false" aria-controls="collapseExample">
-                        <i class="fas fa-chevron-right text-primary-emphasis me-3 fa-sm"></i>Institucional
+                    <a class="link-hover" data-bs-toggle="collapse" href="#collapseAtendimento" role="button"
+                        aria-expanded="false" aria-controls="collapseAtendimento">
+                        <i class="fas fa-chevron-right text-primary-emphasis me-3 fa-sm rotate-icon"></i>Institucional
                     </a>
                     <hr class="mb-1 my-2 w-50 text-primary">
-                    <div class="collapse ms-4" id="collapseExample">
+                    <div class="collapse ms-4" id="collapseAtendimento">
                         <a class="link-hover" href="<?= \yii\helpers\Url::to(['/site/index']) ?>">
                             <i class="fas fa-minus text-primary-emphasis me-2 fa-sm"></i>O Instituto
                         </a>
